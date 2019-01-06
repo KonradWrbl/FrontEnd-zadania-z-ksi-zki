@@ -1,0 +1,13 @@
+<div class="row">
+  {{#each model as |stwor|}}
+    <div class="col-xs-12 col-sm-3 text-center">
+      {{#link-to 'stwor' stwor.id}}
+        {{element-listy zdjecie=stwor.zdjecie nazwa=stwor.nazwa}}
+      {{/link-to}}      
+    </div>
+  {{else}}
+    <div class="jumbotron">
+      <h1>Brak stworów</h1>
+    </div>
+  {{/each}}
+</div>

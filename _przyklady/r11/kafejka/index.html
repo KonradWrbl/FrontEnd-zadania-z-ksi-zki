@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kafejka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body class="container">
+    <header>
+      <h1>Kafejka</h1>
+    </header>
+    <section>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form data-zamówienie="formularz">
+            <div class="form-group">
+              <label for="zamówienieKawy">Zamówienie</label>
+              <input class="form-control" name="kawa" id="zamówienieKawy" autofocus>
+            </div>
+            <div class="form-group">
+              <label for="daneEmail">Adres e-mail</label>
+              <input class="form-control" type="email" name="adresEmail"
+                id="daneEmail" value="" placeholder="dr@no.com">
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="wielkość" value="mała">
+                Mała
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="wielkość" value="średnia" checked>
+                Średnia
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="wielkość" value="duża">
+                Duża
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="smakKawy">Smak</label>
+              <select id="smakKawy" class="form-control" name="smak">
+                <option value="">Brak</option>
+                <option value="karmelowy">karmelowy</option>
+                <option value="migdałowy">migdałowy</option>
+                <option value="czekoladowy">czekoladowy</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mocKawy">Moc kawy</label>
+              <input name="moc" id="mocKawy" type="range" value="30">
+            </div>
+            <button type="submit" class="btn btn-default">Wyślij</button>
+            <button type="reset" class="btn btn-default">Resetuj</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Oczekujące zamówienia:</h4>
+          <div data-zamówienie="listaZamówień">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="skrypty/listazamówień.js" charset="utf-8"></script>
+    <script src="skrypty/obsługaformularza.js" charset="utf-8"></script>
+    <script src="skrypty/bazadanych.js" charset="utf-8"></script>
+    <script src="skrypty/furgonetka.js" charset="utf-8"></script>
+    <script src="skrypty/główny.js" charset="utf-8"></script>
+  </body>
+</html>

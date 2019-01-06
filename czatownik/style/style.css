@@ -1,0 +1,66 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-bottom: 10px
+}
+
+.czat-zasobnik {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.czat-komunikaty {
+  flex: 3;
+  overflow-y: auto;
+}
+
+ul, ul.panel-body {
+  margin: 0;
+  padding: 0;
+}
+
+.odd {
+  background: #eee;
+}
+
+.wiersz-komunikatu {
+  list-style-type: none;
+  padding: 4px 12px;
+  display: flex;
+}
+
+.wiersz-komunikatu img {
+  padding-right: 1em;
+  border-radius: 15px;
+}
+
+.ja {
+  flex-direction: row-reverse;
+}
+
+.ja img{
+  padding-right: 0;
+  padding-left: 1em;
+}
+
+.ja p {
+  text-align: right;
+}
+
+.komunikat-użytkownik {
+  font-weight: bold;
+}
+
+.komunikat-komunikat {
+  display: block;
+}
+
+.komunikat-użytkownik + .czas {
+  padding-left: 8px;
+}
+
+.czas {
+  font-style: italic;
+}

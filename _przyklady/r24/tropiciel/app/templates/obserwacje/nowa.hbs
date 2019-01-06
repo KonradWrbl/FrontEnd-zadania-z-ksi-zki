@@ -1,0 +1,27 @@
+<h1>Nowa obserwacja</h1>
+<form {{action "zapisz" on="submit"}}>
+  <div class="form-group">
+    <label for="nazwa">Stwór</label>
+    {{#x-select value=model.obserwacja.stwor class="form-control"}}
+      {{#x-option}}Wybierz stwora{{/x-option}}
+      {{#each model.stwory as |stwor|}}
+        {{#x-option value=stwor}}{{stwor.nazwa}}{{/x-option}}
+      {{/each}}
+    {{/x-select}}
+  </div>
+  <div class="form-group">
+    <label>Świadkowie</label>
+    {{#x-select value=model.obserwacja.swiadkowie multiple=true class="form-control"}}
+      {{#x-option}}Wybierz świadków{{/x-option}}
+      {{#each model.swiadkowie as |swiadek|}}
+          {{#x-option value=swiadek}}{{swiadek.imieNazwisko}}{{/x-option}}
+      {{/each}}
+    {{/x-select}}
+  </div>
+  <div class="form-group">
+    <label for="miejsce">Miejsce</label> {{input value=model.obserwacja.miejsce
+      type="text" class="form-control" name="miejsce" required=true}}
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">Zapisz</button>
+  <button {{action 'anuluj'}} class="btn btn-link btn-block">Anuluj</button>
+</form>

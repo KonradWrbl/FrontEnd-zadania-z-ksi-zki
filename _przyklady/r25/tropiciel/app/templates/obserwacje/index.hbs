@@ -1,0 +1,19 @@
+<div class="row">
+  {{#each model as |obserwacja|}}
+    <div class="col-xs-12 col-sm-3 text-center">
+      {{#element-listy zdjecie=obserwacja.stwor.zdjecie
+        nazwa=obserwacja.stwor.nazwa}}
+        {{#if obserwacja.miejsce}}
+          <h3>{{obserwacja.miejsce}}</h3>
+          <p>{{data-od obserwacja.dataObserwacji}}</p>
+        {{else}}
+          <h3 class="text-danger">Zmyślona obserwacja</h3>
+        {{/if}}
+        {{#link-to 'obserwacja.edycja' obserwacja.id tagName="button"
+          class="btn btn-success btn-block"}}
+          Zmień
+        {{/link-to}}
+      {{/element-listy}}
+    </div>
+  {{/each}}
+</div>

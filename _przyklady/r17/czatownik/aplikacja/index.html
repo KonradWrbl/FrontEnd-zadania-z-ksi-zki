@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chattrbox</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style/style.css">
+  </head>
+  <body class="container czat-zasobnik">
+
+    <header class="czat-nagłówek">
+      <meta charset="utf-8">
+      <h1>Czatownik</h1>
+    </header>
+
+    <div class="panel panel-default czat-komunikaty">
+        <ul class="panel-body czat-lista-komunikatów" data-czat="message-list"></ul>
+    </div>
+
+    <section class="czat-pole">
+      <form data-czat="chat-form" class="zasobnik-formularza">
+        <div class="input-group">
+          <label class="sr-only">Wiadomość:</label>
+          <input type="text" class="form-control" data-czat="message-input" autofocus>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Wyślij!</button>
+          </span>
+        </div>
+      </form>
+    </section>
+
+    <script src="/skrypty/komp/podst.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" type="text/javascript" charset="utf-8"></script> -->
+  </body>
+</html>

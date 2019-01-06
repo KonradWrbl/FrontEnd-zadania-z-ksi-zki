@@ -1,0 +1,16 @@
+<div class="row">
+  {{#each model as |obserwacja|}}
+    <div class="col-xs-12 col-sm-3 text-center">
+      <div class="media well">
+        <div class="caption">
+          {{#if obserwacja.miejsce}}
+            <h3>{{obserwacja.miejsce}}</h3>
+            <p>{{data-od obserwacja.dataObserwacji}}</p>
+          {{else}}
+            <h3 class="text-danger">Zmyślona obserwacja</h3>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
