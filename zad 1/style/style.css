@@ -110,3 +110,26 @@ a {
     font-size: 40px;
     text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
 }
+
+@media all and (min-width: 768px) {
+    
+    .główna-treść {
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .lista-miniatur {
+        flex-direction: column;
+        order: 0;
+        margin-left: 20px;
+    }
+    
+    .element-listy {
+        max-width: 260px;
+    }
+    
+    .element-listy + .element-listy {
+        margin-top: 20px;
+    
+    }
+}
