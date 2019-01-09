@@ -34,6 +34,41 @@ body {
 a {
     text-decoration: none;
 }
+
+
+/*.HolyGrail {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.HolyGrail-body {
+    display: flex;
+    flex: 1;
+}
+
+.HolyGrail-content {
+    flex: 1;
+}
+
+.HolyGrail-nav, .HolyGrail-ads {
+    flex: 0 0 12em;
+}
+
+.HolyGrail-nav {
+    order:-1;
+}
+*/
+.HolyGrail, .HolyGrail-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.HolyGrail-nav {
+    flex: 0 0 12em;
+}
+
+
 .główny-tytuł {
     flex: 0 1 auto;
 }
@@ -131,5 +166,18 @@ a {
     .element-listy + .element-listy {
         margin-top: 20px;
     
+    }
+
+    .HolyGrail-body {
+        flex-direction: row;
+        flex: 1;
+    }
+
+    .HolyGrail-content {
+        flex: 1;
+    }
+
+    .HolyGrail-nav, .HolyGrail-ads {
+        flex: 0 0 12em;
     }
 }
