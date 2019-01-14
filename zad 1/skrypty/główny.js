@@ -45,6 +45,14 @@ function inicjujZdarzenia(){
     'use strict';
     var miniatury = odczytajTablicęMiniatur();
     miniatury.forEach(dodajObsługęKliknięciaMiniatury)
+
+    changeThumbnailsUrl(miniatury);
+}
+
+function changeThumbnailsUrl(miniatury){
+    var i = Math.floor(Math.random() * 6);
+    miniatury[i].setAttribute("data-url-obrazu", "obrazy/wydra5.jpg");
 }
 
 inicjujZdarzenia();
+
