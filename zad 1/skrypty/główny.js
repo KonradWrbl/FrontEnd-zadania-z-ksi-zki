@@ -3,6 +3,8 @@ var SELEKTOR_TYTUŁU_OBRAZU = '[data-typ-obrazu = "tytuł"]';
 var SELEKTOR_MINIATURY = '[data-typ-obrazu="wyzwalacz"]';
 var classHiddenPic = 'ukryty-duży-obraz';
 var keyESC = 27;
+var SELEKTOR_RAMKI_OBRAZU = '[data-typ-obrazu="ramka"]';
+var REGUŁA_MALEGO_OBRAZU = 'bardzo-mały-obraz';
 
 //function changeThumbnailsUrl(miniatury);
 
@@ -53,7 +55,13 @@ function hideBigPicture(){
 
 function showBigPicture() {
     'use strict';
+    var ramka = document.querySelector(SELEKTOR_RAMKI_OBRAZU);
     document.body.classList.remove(classHiddenPic);
+    ramka.classList.add(REGUŁA_MALEGO_OBRAZU);
+    setTimeout(function() {
+        ramka.classList.remove(REGUŁA_MALEGO_OBRAZU);
+    }, 50);
+    
 }
 
 function addKeysOperator() {
