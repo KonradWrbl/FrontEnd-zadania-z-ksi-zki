@@ -1,6 +1,10 @@
 var SELEKTOR_DUŻEGO_OBRAZU = '[data-typ-obrazu = "cel"]';
 var SELEKTOR_TYTUŁU_OBRAZU = '[data-typ-obrazu = "tytuł"]';
 var SELEKTOR_MINIATURY = '[data-typ-obrazu="wyzwalacz"]';
+var classHiddenPic = 'ukryty-duży-obraz';
+var keyESC = 27;
+
+//function changeThumbnailsUrl(miniatury);
 
 
 function zmieńObraz(urlObrazu, tekstTytułu) {
@@ -31,6 +35,7 @@ function dodajObsługęKliknięciaMiniatury(miniatura){
     miniatura.addEventListener('click', function(zdarzenie){
         zdarzenie.preventDefault();
         zmieńObrazNaPodstawieMiniatury(miniatura);
+        showBigPicture();    
     })
 }
 
@@ -41,10 +46,32 @@ function odczytajTablicęMiniatur(){
     return tablicaMiniatur;
 }
 
+function hideBigPicture(){
+    'use strict';
+    document.body.classList.add(classHiddenPic);
+}
+
+function showBigPicture() {
+    'use strict';
+    document.body.classList.remove(classHiddenPic);
+}
+
+function addKeysOperator() {
+    'use strict';
+    document.body.addEventListener('keyup', function(e) {
+        e.preventDefault();
+        console.log(e.keyCode);
+        if (e.keyCode === keyESC) {
+            hideBigPicture();
+        }
+    });
+}
+
 function inicjujZdarzenia(){
     'use strict';
     var miniatury = odczytajTablicęMiniatur();
-    miniatury.forEach(dodajObsługęKliknięciaMiniatury)
+    miniatury.forEach(dodajObsługęKliknięciaMiniatury);
+    addKeysOperator();
 
     changeThumbnailsUrl(miniatury);
 }
