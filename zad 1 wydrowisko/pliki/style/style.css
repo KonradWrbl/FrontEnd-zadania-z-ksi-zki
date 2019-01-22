@@ -134,10 +134,10 @@ a {
 .ramka-dużego-obrazu {
     position: relative;
     text-align: center;
-    transition: transform 333ms
+    transition: transform 333ms cubic-bezier(1,0.06,0.28,1);
 }
 
-.verySmallPicture {
+.bardzo-mały-obraz {
     transform: scale(0.001);
     transition: transform 0ms;
 }
