@@ -27,4 +27,4 @@
 
     aplication.Van = Van;
     window.aplication = aplication
-})
+}) (window);

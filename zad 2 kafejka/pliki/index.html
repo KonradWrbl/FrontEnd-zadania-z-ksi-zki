@@ -3,8 +3,61 @@
     <head>
         <meta charset="utf-8">
         <title>Kafejka</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
-    <body>
+    <body class="container">
+        <header>
+            <h1>Kafejka</h1>
+        </header>
+        <section>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form data-order="form">
+                        <div class="form-group">
+                            <label for='coffeOrder'>Zamówienie</label>
+                            <input class='form-control' name='coffe' id='coffeOrder' autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for='emailData'>Adres email</label>
+                            <input class='form-control' type='email' name='emailAdres' id='emailData' value='' placeholder="dr@no.com">
+                        </div>
+                        <div class='radio'>
+                            <label>
+                                <input type='radio' name='size' value='Mała'>
+                                Mała
+                            </label>
+                        </div>
+                        <div class='radio'>
+                            <label>
+                                <input type='radio' name='size' value='Średnia' checked>
+                                Średnia
+                            </label>
+                        </div>
+                        <div class='radio'>
+                            <label>
+                                <input type='radio' name='size' value='Duża'>
+                                Duża
+                            </label>
+                        </div>
+                        <div class='form-group'>
+                            <label for='smakKawy'>Smak</label>
+                            <select name="taste" id="coffeTaste" class='form-control'>
+                                <option value="">Brak</option>
+                                <option value="karmelowy">Karmelowy</option>
+                                <option value="mogdałowy">Mogdałowy</option>
+                                <option value="czekoladow">Czekoladowy</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mocKawy">Moc kawy</label>
+                            <input name='moc' id='mocKawy' type="range" value="30">
+                        </div>
+                        <button type="submit" class="btn btn-default">Wyślij</button>
+                        <button type="reset" class="btn btn-default">Resetuj</button>
+                    </form>
+                </div>
+            </div>
+        </section>
         <script src="scripts/database.js" charset="utf-8"></script>
         <script src="scripts/van.js" charset="utf-8"></script>
         <script src="scripts/main.js" charset="utf-8"></script>
