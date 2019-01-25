@@ -17,7 +17,8 @@
         this.DataBase.delete(clientsId);
     };
 
-    Van.prototype.printOreder = function() {
+    Van.prototype.printOrder = function() {
+        console.log("huehuehuehue");
         var tabOfClients = Object.keys(this.DataBase.downloadAll());
         console.log(`Furgonetka nr '${this.id}' ma niezrealizowane zamówienia:`);
         tabOfClients.forEach(function(id) {

@@ -7,11 +7,11 @@
     } 
 
     DataBase.prototype.add = function(key, value) {
-        return this.data[key] = value;
+        this.data[key] = value;
     };
 
     DataBase.prototype.download = function(key) {
-        this.data.data[key];
+        return this.data[key];
     };
 
     DataBase.prototype.downloadAll = function() {
