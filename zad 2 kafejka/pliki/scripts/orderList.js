@@ -23,15 +23,15 @@
         });
         var $label = $('<label></label>');
         var $poleWyboru = $('<input></input>', {
-            type: 'checkbox', value: order.email
+            type: 'checkbox', value: order.emailAdres
         });
         var description = order.size + ' ';
         if(order.taste) {
             description += order.taste + ' ';
         }
         description += order.coffe;
-        description += ' (' + order.email + ')';
-        description += ' [' + order.power + 'x] ';
+        description += ' (' + order.emailAdres + ')';
+        description += ' [' + order.moc + 'x] ';
 
         $label.append($poleWyboru);
         $label.append(description);
