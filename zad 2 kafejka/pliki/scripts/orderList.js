@@ -13,17 +13,17 @@
     }
 
     OrderList.prototype.addVerse = function(order) {
-        var verseElement = new verse(order);
+        var verseElement = new Verse(order);
         this.$element.append(verseElement.$element);
     };
 
-    function verse(order) {
+    function Verse(order) {
         var $div = $('<div></div>', {
-            'data-order': 'poleWyboru', 'class': 'checkedbox'
+            'data-order': 'poleWyboru', 'class': 'checkbox'
         });
         var $label = $('<label></label>');
         var $poleWyboru = $('<input></input>', {
-            value: order.email
+            type: 'checkbox', value: order.email
         });
         var description = order.size + ' ';
         if(order.taste) {
@@ -33,7 +33,7 @@
         description += ' (' + order.email + ')';
         description += ' [' + order.power + 'x] ';
 
-        $label.apend($poleWyboru);
+        $label.append($poleWyboru);
         $label.append(description);
         $div.append($label);
 
