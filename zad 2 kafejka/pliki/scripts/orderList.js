@@ -12,9 +12,25 @@
         }
     }
 
+    OrderList.prototype.addClickSupport = function(fn) {
+        this.$element.on('click', 'input', function(e) {
+            let emailAdres = event.target.value;
+            this.removeVerse(emailAdres);
+            fn(emailAdres);
+        }.bind(this));
+    };
+
     OrderList.prototype.addVerse = function(order) {
+        this.removeVerse(order.emailAdres);
         var verseElement = new Verse(order);
         this.$element.append(verseElement.$element);
+    };
+
+    OrderList.prototype.removeVerse = function(emailAdres) {
+        this.$element
+        .find(`[value="${emailAdres}"]`)
+        .closest('[data-order="poleWyboru]')
+        .remove();
     };
 
     function Verse(order) {

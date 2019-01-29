@@ -5,6 +5,9 @@
     var aplication = window.aplication;
     var Van = aplication.Van;
     var DataBase = aplication.DataBase;
+
+    orderList.addClickSupport(myVan.completeOrder.bind(myVan));
+
     var FormSupport = aplication.FormSupport;
     var myVan = new Van('ncc-1701', new DataBase());
     var OrderList = aplication.OrderList;
