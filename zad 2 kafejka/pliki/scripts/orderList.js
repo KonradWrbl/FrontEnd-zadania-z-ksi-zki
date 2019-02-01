@@ -7,14 +7,14 @@
             throw new Error('Brak selektora');
         }
         this.$element = $(selector);
-        if(this.$element.length===0) {
+        if(this.$element.length === 0) {
             throw new Error(`Brak elementów odpowiadających selektorowi ${selector}`);
         }
     }
 
     OrderList.prototype.addClickSupport = function(fn) {
-        this.$element.on('click', 'input', function(e) {
-            let emailAdres = event.target.value;
+        this.$element.on('click', 'input', function(event) {
+            var emailAdres = event.target.value;
             this.removeVerse(emailAdres);
             fn(emailAdres);
         }.bind(this));
